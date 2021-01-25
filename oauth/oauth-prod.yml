@@ -1,0 +1,136 @@
+spring:
+   #mysql数据源
+   datasource:
+      url: jdbc:mysql://localhost:3306/jetsum_ict?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+      driver-class-name: com.mysql.jdbc.Driver
+      username: root
+      password: Ts@159369
+      min-idle: 5
+      initial-size: 5
+      max-active: 20
+      test-on-borrow: true
+   output:
+      ansi:
+        enabled: always   
+   jackson:
+      time-zone: GMT+8 
+      date-format: yyyy-MM-dd HH:mm:ss 
+   redis:
+      host: 114.55.237.147
+      port: 6379
+      password: jetsum123456
+      # 连接超时时间（毫秒）
+      timeout: 10000
+      pool:
+        # 连接池中的最大空闲连接
+        max-idle: 80
+        # 连接池中的最小空闲连接
+        min-idle: 10
+        # 连接池最大连接数（使用负值表示没有限制）
+        max-active: 100
+        # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: -1 
+## qq openid 
+oauth:
+  QQ:
+    openid: 101517100
+    openkey: 7c28a299b454e134c4e5494bc16ca831
+    redirect: http://www.ictpaas.com/reachThirdWay/qq
+## weixin openid http://www.jianshu.com/p/3733777a2020
+  Weixin:
+    openid: wx7ccaf6380bbf5c34
+    openkey: 0368cfad3263dc1e4f23ace76d8b878b
+    redirect: http://www.ictpaas.com/reachThirdWay/wechat
+  Alipay:
+    #appId
+    openid: 2018090661284625
+    #privateKey
+    privateKey: MIIEowIBAAKCAQEAwLdRGCDm+ACGtdk7kwwuonuwqhiZeiaKAVGIiOeqqF4apUWmxph7DhUeqHhSqb1iPTX3q8WtNTxvFjVRJA7B1kyFpOIa+rwepIRKSoB4No1uPpp4wwetUWeRw9mDKc469KPRPZnwwl1i5A2PbtVSS51DHFIUitdC3TPdfwYGjTR8Q2Hebl/UCBlyJPFISKHgmiMlJ4TiGghUmrglx//biKwAUViVCGXrAjRbroE6kVy4KxsuowuLC5weFWLf4NvwpemEn8AHdOUJ76kfbNvR88+qOMRmlb/6IhEO2IXIcl+fDKWb2KxGAmiy3kaUeqR1YRK07rLM4mIp48EsEl57zQIDAQABAoIBADS1rwt/bEzmr/GrAd1dVqAAXriXU9sSEWr85vAzFP1KB9WucEgfSoD2i9UeW9WrQ+RkD2K/BXnrFqMnYBMRqji341HOufxcWbE7saog60BYfI/I5kDJp8D9J+Q+aN6VVpC1AbTslupCaprfjpyM4h5mXAWx+YZkDBi+Z9WnS0FxYM+e9a2KBZw2m/5AN62Udq90Jeu6CQt2zqz5f3SkcWC8Ye4dNE0WSLGZL3obEeuBPJmn3N/3b5jwUU4S2UmOx3QRG9yh4nrgutNaSLBGWbScZ8hRRm2At5S+we/Jf51AnkR9PgeBLXkHmp6PBiSq0C7OYv9hb+VOkDuJT+u0iI0CgYEA7LWU0F009QZJbnlpdzyenlpn3WfHDSYqzAfWEtdtkrfTnKBWwlqvK9pVWKtyitwCtYtEvwecGkHVQFcx4fwftTJ5QSoeAI9V7A+4moam5JLk4DMQySis7Dq5hPXkLufFOmvHanX6cKP8Gwesb2kPORPxgqrDkuQWnX//MB2iTl8CgYEA0Gvp6f+iP/2ul5aBO9WVQdJZpR/t+pPsPd6Am/w2ZT+IN3CF7/OzQ9z+ZuTqRIBkiM2BBg2n+VDwuPKWvnLAeUdbacf02Fd3lasyDrIXl8ZCOwX1Nu3kwHJ/j4Em+Jqqrl0JZurEnUDCi6r9pl2XR6zLeu8jPJT9Rt1jMJkjzVMCgYBA0XBQplVMC06sW77Pkd/1iNgMPtC4/wyVFkg+nJM6q+/cYeOgEOkK3xyjzT7uW1S6lcpbbSAH6KMWnUnhkgK0wX+GopvYl2d13tA0ME8fJEJcSl98VhEUFviaOiMj3P+bAcx3kJrloWH1nOJRF7m9bYKiv1QSszamJligulypjQKBgCp38r/1kPANFwhYaJjymmlBHXciHHHUtmyc7APczpCu82ioiwIr3DlVzJjWyE2RA+tERKghHDsXHRXyiHjiFQohWiUh02hJ2loq+hY4f8ozYcd5HVBGBTiZnBh3rqM1kNXaq1HHQKzyRzICc5D0vSCjuwqfs8Rib4GDFvUOH1d1AoGBAKSgo7rzjencn3QbK9S1oRCqH0j/iqngyzcjUj9hwvX/l21AcoYsOzumBT722W3DHJ3+8n+H9H3HerToQWVioG1XfaCaNuKzXRaE2XRFgLvFVqrdCKWBN2NH8vZgy6mTHNwTgupfxbVwGUA2Ej2LaDNRJpwV+GCEWFUCYLBXKZT2
+    #alipayPublicKey
+    openkey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwLdRGCDm+ACGtdk7kwwuonuwqhiZeiaKAVGIiOeqqF4apUWmxph7DhUeqHhSqb1iPTX3q8WtNTxvFjVRJA7B1kyFpOIa+rwepIRKSoB4No1uPpp4wwetUWeRw9mDKc469KPRPZnwwl1i5A2PbtVSS51DHFIUitdC3TPdfwYGjTR8Q2Hebl/UCBlyJPFISKHgmiMlJ4TiGghUmrglx//biKwAUViVCGXrAjRbroE6kVy4KxsuowuLC5weFWLf4NvwpemEn8AHdOUJ76kfbNvR88+qOMRmlb/6IhEO2IXIcl+fDKWb2KxGAmiy3kaUeqR1YRK07rLM4mIp48EsEl57zQIDAQAB
+    redirect: http://www.ictpaas.com/reachThirdWay/alipay
+  Sina:
+    openid: 3492770126
+    openkey: fa432674da098c63c37004b30e7d1b3b
+    redirect: http://www.ictpaas.com/reachThirdWay/sina
+
+## baidu openid
+  Baidu:
+    openid: xwKOgtKjbbrn9dOb7ZkGrAo5
+    openkey: dNlKN4vVqgZvROrWW8twc4wESGWkSfF8
+    redirect: http://www.dreamlu.net/api/baidu/callback
+
+## renren openid
+  Renren:
+    openid: 80cd6ab8bc924c97b78e06568196456e
+    openkey: 51aab0e2633f43a2aeda89f299a7b4f8
+    redirect: http://www.dreamlu.net/api/renren/callback
+
+## osc openid
+  Osc:
+    openid: R6XS1Qnhist6jy5UABer
+    openkey: llvILNi5ThQj2YwgbM6qx7BOEKIfJjjM
+    redirect: http://www.dreamlu.net/api/osc/callback
+
+## douban openid
+  Douban:
+    openid: 04e962ea4e22c5980ebc28beea6850c8
+    openkey: d7ae6ac47ddf75e2
+    redirect: http://www.dreamlu.net/api/douban/callback
+
+## github openid `no tested`
+  Github:
+    openid: 
+    openkey: 
+    redirect: 
+    
+jwt:
+   #http请求头所需要的字段
+   header: Authorization
+   #jwt秘钥
+   secret: mySecret
+   #7天 单位:秒
+   expiration: 7200
+   #认证请求的路径
+   auth-path: oauth
+   #md5加密混淆key
+   md5-key: randomKey
+#mybatis配置文件路径
+mybatis:
+   mapper-locations: classpath*:mapper/*Mapper.xml
+   type-aliases-package: com.jetsum.pojo.oauth
+   configuration:
+    map-underscore-to-camel-case: true 
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**Mapper.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: com.jetsum.pojo.oauth 
+  global-config:
+    #主键类型  0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
+    id-type: 0
+    #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
+    field-strategy: 2
+    #驼峰下划线转换
+    db-column-underline: true
+    #刷新mapper 调试神器
+    refresh-mapper: true
+    #数据库大写下划线转换
+    #capital-mode: true
+    #序列接口实现类配置
+    #key-generator: com.baomidou.springboot.xxx
+    #逻辑删除配置
+    #    logic-delete-value: 1
+    #    logic-not-delete-value: 0
+    #自定义SQL注入器
+    #sql-injector: com.baomidou.springboot.xxx
+  configuration:
+    map-underscore-to-camel-case: true 
+    cache-enabled: false 
+
+#开启日志
+logging:
+  level:
+     com.jetsum.payment.mapper: debug
+
+com:
+   adress: prod
